@@ -6,12 +6,12 @@ function ReID_framework
 
 close all
 
-addpath '.\KISSME'
-addpath '.\auxiliary'
-addpath '.\ranking_aggregation'
+addpath './KISSME'
+addpath './auxiliary'
+addpath './ranking_aggregation'
 
 dataset = 'viper'; 
-% dataset='prid450S';
+% dataset='prid450s';
 
 % To run our ICIP 2015 code (coined CBRA), uncomment the following line
 % ICIP(dataset);
@@ -33,12 +33,13 @@ dataset = 'viper';
 %AVSS2016(filename, dataset)
 
 %To run our ICPR2016 code.
-%ICPR2016(filename, dataset)
+filename = ['ICPR2016_' dataset]
+ICPR2016(filename, dataset)
 
 %To run our ARXIV paper (Kernel Cross-View Collaborative Representation based Classification for Person Re-Identification )
-if strcmp(dataset,'viper')
-	demo_viper
-else if strcmp(dataset,'cuhk01')
-        demo_cuhk01
-	 end
+%if strcmp(dataset,'viper')
+%	demo_viper
+%else if strcmp(dataset,'cuhk01')
+%        demo_cuhk01
+%	 end
 end

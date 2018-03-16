@@ -45,10 +45,10 @@ clc
 if nargin <2
     error('You must specify the dataset and filename');
 end
-addpath(genpath('.\auxiliary'));
+addpath(genpath('./auxiliary'));
 
 load(sprintf('./auxiliary/%s_lomo_mix_avss2016.mat',dataset));
-params.saveDir = strcat('.\Graphics\',dataset,'\');
+params.saveDir = strcat('./Graphics/',dataset,'/');
 answer={};legend={};
 params.Iter =10;
 
